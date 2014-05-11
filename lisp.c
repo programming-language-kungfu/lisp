@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lib/mpc.h"
+#include "eval.h"
 
 #ifdef _WIN32
 
@@ -50,7 +51,7 @@ int main(int argc, char ** argv){
 
         mpc_result_t result;
         if(mpc_parse("<stdin>", input, Lispy, &result)){
-            mpc_ast_print(result.output);
+            printf("%li\n", eval(result.output));
             mpc_ast_delete(result.output);
         }else{
             mpc_err_print(result.error);
