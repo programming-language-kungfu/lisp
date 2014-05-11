@@ -25,8 +25,6 @@ void add_history(Char * unused){}
 
 #endif
 
-int number_of_nodes(mpc_parser_t *);
-
 int main(int argc, char ** argv){
 
     mpc_parser_t* Number = mpc_new("number");
