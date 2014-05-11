@@ -1,3 +1,12 @@
 This is an implementation of a lisp. 
 
 Based on Daniel Holden's excellent tutorial http://www.buildyourownlisp.com/contents
+
+Instructions
+============
+
+- Run ./make to compile the program, this will create an executable called lisp.
+- Run ./lisp to run the program.
+- sample input; 
+
++ 1 2(polish notation http://en.wikipedia.org/wiki/Polish_notation) would give you a result of 3
