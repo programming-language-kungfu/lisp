@@ -2,29 +2,8 @@
 #include <stdlib.h>
 #include "lib/mpc.h"
 #include "eval.h"
-
-#ifdef _WIN32
-
-#include <string.h>
-
-static char buffer[2048];
-
-char * readline(char * prompt){
-    fputs(prompt, stdout);
-    fgets(buffer, 2048, stdin);
-    char * copy = malloc(strlen(buffer) + 1);
-    copy = strcpy(copy, buffer);
-    copy[strlen(buffer+1)] = '\0';
-    return copy;
-}
-
-void add_history(Char * unused){}
-
-#else
-
 #include <editline/readline.h>
 
-#endif
 
 int main(int argc, char ** argv){
 
