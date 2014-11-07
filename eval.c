@@ -6,7 +6,6 @@ long eval(mpc_ast_t * ast){
     if(strstr(ast->tag, "number")) { return atoi(ast->contents); }
 
     char * operator = ast->children[1]->contents;
-
     long left_operand = eval(ast->children[2]);
 
     int i = 3;
